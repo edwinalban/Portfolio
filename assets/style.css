@@ -1,0 +1,121 @@
+:root {
+    --light-blue: rgba(220, 222, 233, 0.887);
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.topbar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    width: 100vw;
+    min-height: 30vh;
+    background-image: linear-gradient( to left top,
+    rgb(3, 12, 0) 0%,
+    rgba(217, 232, 215, 0.6) 100%);
+}
+
+.profile-img-wrapper {
+    flex: 1;
+}
+
+.profile-img {
+    width: 15rem;
+    height: 21rem;
+    border-radius: 50%;
+}
+
+.name {
+    flex: 2;
+    align-self: center;
+}
+
+.navbar-wrapper {
+    flex: 2;
+    align-self: flex-end;
+}
+
+.profile-img-wrapper:first-child {
+    align-self: flex-end;
+}
+
+ul li {
+    display: inline;
+    white-space: nowrap;
+}
+
+nav li > a {
+    color: var(--light-blue);
+    text-decoration: none;
+    font-size: 2rem;
+    padding-right: 2vw;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-content: center;
+    }
+    .profile-img-wrapper:first-child {
+        align-self: center;
+    }
+    .profile-img {
+        width: 8rem;
+        height: 10rem;
+    }
+    .name {
+        flex: 2;
+        align-self: center;
+    }
+    .navbar-wrapper {
+        display: flex;
+        flex: 2 1;
+        align-items: center;
+        justify-items: center;
+    }
+    nav li > a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .topbar {
+        align-content: center;
+    }
+    .profile-img-wrapper:first-child {
+        align-self: center;
+    }
+    .profile-img {
+        width: 12rem;
+        height: 15rem;
+    }
+    .name {
+        flex: 2;
+        align-self: center;
+    }
+    .navbar-wrapper {
+        display: flex;
+        flex: 2 1;
+        align-items: center;
+        justify-items: center;
+    }
+    nav li > a {
+        font-size: 1.5rem;
+    }
+}
