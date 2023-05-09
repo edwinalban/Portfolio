@@ -6,6 +6,7 @@
 /* removes margin universally */
 * {
     margin: 0;
+    padding: 0;
 }
 
 /* sets font for html */
@@ -95,14 +96,14 @@ a:hover {
     justify-content: flex-end;
 }
 
-/* allows p div to grow 10x h2 div and shrink from 75 rem */
+/* allows content wrapper to grow 10x h2 div and shrink from 75 rem */
 .about-content-wrapper {
     display: flex;
     flex: 10 1 75rem;
-    margin-left: 1rem;
-    width: 25vw;
+    margin-left: 5rem;
+    width: 40vw;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 p {
@@ -110,10 +111,6 @@ p {
     width: 60vw;
     font-size: 1.25rem;
 }
-/* why doesnt this work? */
-/* .about-content-wrapper:first-child {
-    justify-self: center;
-} */
 
 /* alters css for screens smaller than 768px wide*/
 @media screen and (max-width: 768px) {
@@ -121,26 +118,56 @@ p {
         flex-direction: column;
         align-content: center;
     }
+
     .profile-img-wrapper:first-child {
         align-self: center;
     }
+
     .profile-img {
         width: 8rem;
         height: 10rem;
     }
+
     .name {
         flex: 2;
         align-self: center;
     }
+
     .navbar-wrapper {
         display: flex;
         flex: 2 1;
         align-items: center;
         justify-items: center;
+        align-self: center;
     }
+
     nav li > a {
         font-size: 1.5rem;
     }
+
+     .about-wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .about-title {
+        flex: 1 1;
+        padding-bottom: 1rem;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: solid black 5px;
+        justify-content: center;
+    }
+
+     .about-content-wrapper {
+        display: flex;
+        flex: 10 1 75rem;
+        width: 80vw;
+        margin: 0;
+        padding-top: 1rem;
+        align-items: flex-start;
+        justify-content: center;
 }
 
 /* alters css for screens smaller than 992px wide */
