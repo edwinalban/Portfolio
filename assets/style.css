@@ -82,6 +82,7 @@ a:hover {
 /* sets "about me" section to flexbox */
 .about-wrapper {
     display: flex;
+    margin-bottom: 5rem;
 }
 
 /* allows align/justify and h2 div to grow from 10rem, prevents h2 wrap */
@@ -106,10 +107,38 @@ a:hover {
     justify-content: flex-start;
 }
 
+/* prevents text from running full length of screen/sets font size */
 p {
     display: inline-block;
     width: 60vw;
     font-size: 1.25rem;
+}
+
+.work-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work {
+    display: flex;
+    flex: 1 0 10rem;
+    padding-right: 2rem;
+    border-right: solid black 5px;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.snippet {
+    display: flex;
+    flex: 5 1;
+    margin-left: 5rem;
+    width: 40vw;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.refactor {
+    flex: 5;
 }
 
 /* alters css for screens smaller than 768px wide*/
@@ -168,6 +197,7 @@ p {
         padding-top: 1rem;
         align-items: flex-start;
         justify-content: center;
+    }
 }
 
 /* alters css for screens smaller than 992px wide */
