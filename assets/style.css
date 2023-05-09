@@ -1,28 +1,27 @@
+/* sets var */
 :root {
     --light-blue: rgba(220, 222, 233, 0.887);
 }
 
+/* removes margin universally */
 * {
     margin: 0;
 }
 
+/* sets font for html */
 html {
     font-family: sans-serif;
 }
 
-body {
-    margin: 0;
-}
-
+/* aligns h1 text to center of div */
 h1 {
     text-align: center;
-    margin: 0;
 }
 
+/* makes header flexbox, allows wrap, sets width, height, background image, and bottom margin */
 .topbar {
     display: flex;
     flex-wrap: wrap;
-    background-color: lightgray;
     width: 100vw;
     min-height: 30vh;
     background-image: linear-gradient( to left top,
@@ -31,35 +30,42 @@ h1 {
     margin-bottom: 5rem;
 }
 
+/* allows profile image div to grow */
 .profile-img-wrapper {
     flex: 1;
 }
 
+/* sets width and height, makes img ovular */
 .profile-img {
     width: 15rem;
     height: 21rem;
     border-radius: 50%;
 }
 
+/* allows h1 to grow 2x profile img div and aligns to center of flexbox cross-axis */
 .name {
     flex: 2;
     align-self: center;
 }
 
+/* allows nav div to grow 2x profile img div, aligns to end of flexbox cross-axis */
 .navbar-wrapper {
     flex: 2;
     align-self: flex-end;
 }
 
+/* aligns to center of flexbox cross-axis */
 .profile-img-wrapper:first-child {
-    align-self: flex-end;
+    align-self: center;
 }
 
+/* makes links line up horizontally, prevents links from wrapping */
 ul li {
     display: inline;
     white-space: nowrap;
 }
 
+/* sets links color, decoration, font-size and padding */
 nav li > a {
     color: var(--light-blue);
     text-decoration: none;
@@ -67,14 +73,18 @@ nav li > a {
     padding-right: 2vw;
 }
 
+/* shows underline on link hover */
 a:hover {
     text-decoration: underline;
 }
 
-.about-me-wrapper {
+/* sets "about me" section to flexbox */
+.about-wrapper {
     display: flex;
 }
 
+/* allows align/justify and h2 div to grow from 10rem, prevents h2 wrap */
+/* sets padding and vertical border */
 .about-title {
     display: flex;
     flex: 1 0 10rem;
@@ -85,13 +95,18 @@ a:hover {
     justify-content: flex-end;
 }
 
-.about-content {
+/* allows p div to grow 10x h2 div and shrink from 75 rem */
+.about-content-wrapper {
+    display: flex;
     flex: 10 1 75rem;
     margin-left: 5rem;
+}
+
+.about-content-wrapper:first-child {
     justify-self: center;
 }
 
-
+/* alters css for screens smaller than 768px wide*/
 @media screen and (max-width: 768px) {
     .topbar {
         flex-direction: column;
@@ -119,6 +134,7 @@ a:hover {
     }
 }
 
+/* alters css for screens smaller than 992px wide */
 @media screen and (max-width: 992px) {
     .topbar {
         align-content: center;
