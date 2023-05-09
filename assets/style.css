@@ -99,12 +99,21 @@ a:hover {
 .about-content-wrapper {
     display: flex;
     flex: 10 1 75rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-content-wrapper:first-child {
-    justify-self: center;
+p {
+    display: inline-block;
+    width: 60vw;
+    font-size: 1.25rem;
 }
+/* why doesnt this work? */
+/* .about-content-wrapper:first-child {
+    justify-self: center;
+} */
 
 /* alters css for screens smaller than 768px wide*/
 @media screen and (max-width: 768px) {
