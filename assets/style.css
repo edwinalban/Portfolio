@@ -129,6 +129,21 @@ p {
     justify-content: flex-start;
     position: relative;
 }
+
+/* allows refactor img div to grow/shrink, sets width, sets position relative */
+.refactor {
+    flex: 1, 1;
+    width: 20vw;
+    position: relative;
+}
+
+/* allows landing img div to grow/shrink, sets width, sets position relative */
+.landing {
+    flex: 1, 1;
+    width: 20vw;
+    position: relative;
+}
+
 /* allows title on imgs to be seen and positions them */
 .overlay {
     display: flex;
@@ -140,18 +155,71 @@ p {
     align-items: center;
 }
 
-.refactor {
-    flex: 1, 1;
-    width: 20vw;
-    position: relative;
+/* alters css for screens smaller than 1280px wide */
+@media screen and (max-width: 1280px) {
+    .topbar {
+        flex-direction: column;
+        align-content: center;
+        width: 100vw;
+    }
+
+    .profile-img-wrapper:first-child {
+        align-self: flex-start;
+    }
+
+    .profile-img {
+        width: 12rem;
+        height: 15rem;
+    }
+
+    .name {
+        flex: 2;
+        align-self: flex-start;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        flex: 2 1;
+        justify-items: flex-end;
+    }
+    nav li > a {
+        font-size: 1.5rem;
+    }
+
+    .section-wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        width: 80vw;
+        padding-top: 5%;
+        margin-bottom: 0;
+    }
+
+    .section-title {
+        display: flex;
+        padding-bottom: 1rem;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: solid black 5px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .work-links {
+        padding-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: space-between;
+    }
 }
 
-.landing {
-    flex: 1, 1;
-    width: 20vw;
-    position: relative;
-}
-
+/* alters css for screens smaller than 1024px wide */
 @media screen and (max-width: 1024px) {
     .topbar {
         flex-direction: column;
