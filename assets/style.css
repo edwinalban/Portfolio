@@ -128,20 +128,35 @@ p {
     align-items: center;
     justify-content: flex-start;
     position: relative;
+    background-color: white;
+}
+
+.snippet:hover {
+    opacity: .7;
 }
 
 /* allows refactor img div to grow/shrink, sets width, sets position relative */
 .refactor {
-    flex: 1, 1;
+    flex: 1 1;
     width: 20vw;
     position: relative;
+    background-color: white;
+}
+
+.refactor:hover {
+    opacity: .7;
 }
 
 /* allows landing img div to grow/shrink, sets width, sets position relative */
 .landing {
-    flex: 1, 1;
+    flex: 1 1;
     width: 20vw;
     position: relative;
+    background-color: white;
+}
+
+.landing:hover {
+    opacity: .6;
 }
 
 /* allows title on imgs to be seen and positions them */
@@ -154,6 +169,7 @@ p {
     opacity: 1;
     align-items: center;
 }
+
 /* alters css for screens smaller than 768px wide*/
 @media screen and (max-width: 768px) {
     .topbar {
@@ -236,7 +252,7 @@ p {
     }
 
     .landing {
-        flex: 1, 1 50%;
+        flex: 1 1 50%;
         width: 20vw;
         position: relative;
     }
@@ -267,8 +283,8 @@ p {
     }
 }
 
-/* alters css for screens larger than 768px wide*/
-@media screen and (min-width: 768px) {
+/* alters css for screens larger than 768px and smaller than 991px wide*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .topbar {
         flex-direction: column;
         align-content: center;
@@ -339,14 +355,14 @@ p {
     }
 
     .landing {
-        flex: 1, 1 50%;
+        flex: 1 1 50%;
         width: 20vw;
         position: relative;
     }
 }
 
-/* alters css for screens smaller than 992px wide */
-@media screen and (min-width: 992px) {
+/* alters css for screens larger than 992px and smaller than 1280px wide */
+@media screen and (min-width: 992px) and (max-width: 1280px) {
     .topbar {
         flex-direction: column;
         align-content: center;
@@ -395,6 +411,7 @@ p {
         border-bottom: solid black 5px;
         width: 50%;
         justify-content: flex-end;
+        margin-bottom: 2%;
     }
 
     .title {
